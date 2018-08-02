@@ -1,0 +1,21 @@
+{
+  "name": "factorial-node-rust-addon",
+  "version": "0.1.0",
+  "description": "Factorial sample built in Rust",
+  "main": "lib/index.js",
+  "private": true,
+  "author": "Jose Quintana <git.io/joseluisq>",
+  "license": "MIT",
+  "dependencies": {
+    "neon-cli": "^0.2.0"
+  },
+  "scripts": {
+    "start": "node .",
+    "test": "mocha ./test/*.spec.js",
+    "install": "neon build"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
