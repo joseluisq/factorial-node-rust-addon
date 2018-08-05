@@ -10,11 +10,17 @@
     "neon-cli": "^0.2.0"
   },
   "scripts": {
-    "start": "node .",
+    "start": "yarn build",
+    "install": "yarn build",
     "test": "mocha ./test/*.spec.js",
-    "install": "neon build"
+    "build": "neon build",
+    "release": "neon build --release && strip native/index.node",
+    "benchmark": "node benchmark.js",
+    "prestart": "node .",
+    "prebenchmark": "yarn release"
   },
   "devDependencies": {
+    "benchmark": "^2.1.4",
     "chai": "^4.1.2",
     "mocha": "^5.2.0"
   }
